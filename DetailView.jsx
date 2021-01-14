@@ -2,13 +2,6 @@ import React, { Component } from 'react'
 import { StyleSheet, Text, View } from 'react-native'
 
 export class DetailView extends Component {
-    constructor(props){
-        super(props)
-        this.state = {
-            user: props.user
-        }
-    }
-
     render() {
         
         const { user } = this.props;
@@ -17,7 +10,10 @@ export class DetailView extends Component {
             <View style={styles.container}>
                 <View style={styles.content}>
                     {user && <Text>{user.name}</Text>}
-                </View>git
+                    {user && <Text>{user.email}</Text>}
+                    {user && <Text>{user.phone}</Text>}
+                </View>
+                git
             </View>
         );
     }

@@ -39,12 +39,12 @@ export default class App extends Component {
     }
 
     render() {
-        const { users } = this.state;
+        const { users, selected } = this.state;
         return (
             <View style={styles.container}>
                 <View style={styles.content}>
                     <PeopleList users={users} />
-                    <DetailView />
+                    <DetailView user={selected/>
                 </View>
             </View>
         );
